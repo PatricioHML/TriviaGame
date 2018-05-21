@@ -1,8 +1,14 @@
 $(document).ready(function() {
-    alert("working");
 
+    function submit() {
+        alert("submited");
+    }
 
-
+    $( ".btn" ).click(function() {
+        $(".results").css({
+            "visibility" : "visible"
+        })
+    });
 
 
 

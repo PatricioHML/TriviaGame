@@ -31,3 +31,51 @@ header {
     padding-bottom: 70px;
 }
 
+ /* aquí inician las preguntas */
+ 
+
+ .content {
+     display: grid;
+     background: #ddd;
+     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+     grid-auto-rows: minmax(100px, auto);
+     grid-template-areas: 
+        '. . clock . .'
+        '. questions questions questions .';
+ }
+
+ .timer {
+     grid-area: clock;
+ }
+
+ .questions {
+     grid-area: questions;
+     background:rgb(80, 212, 252);
+     padding: 30px;
+     border: black solid 1px;
+     box-shadow: 0 1px 5px rgba(104, 104, 104, 0.8);
+ }
+
+ .btn {
+     margin-top: 10px;
+    background: #333;
+    color: #ddd;
+    padding: 0.6rem 1.3rem;
+    text-decoration: none;
+
+ }
+
+ .btn:hover {
+    background: #ddd;
+    color: #333;
+    padding: 0.6rem 1.3rem;
+    text-decoration: none;
+
+ }
+
+ .results {
+     margin-top: 30px;
+     font-size: 20px;
+     color: white;
+     visibility: hidden;
+ }
