@@ -92,13 +92,14 @@ function update()
         $(".results").css({
             "visibility" : "visible"
             
-            
+               
         });
         submit();
         count = 900000;
         $(".clock").css({
             "visibility" : "hidden"
         })
+        $(this).prop('disabled', true);
         
 
 

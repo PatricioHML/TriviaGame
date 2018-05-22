@@ -102,3 +102,32 @@ header {
 
 
  }
+
+ .start {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-auto-rows: minmax(100px, auto);
+    background:  url(https://msmjamie.files.wordpress.com/2015/01/press-start-600x375.jpg);
+    background-size: cover;
+    background-position: center;
+    min-height: 700px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas: 
+        '. . . . . .'
+        '. . . . . .'
+        '. . . . . .'
+        '. . . . . .'
+        '. . . . . .'
+        '. . pa pa pa .'
+        '. . pa pa pa .';
+
+
+}
+
+.rules {
+    color: white;
+    font-size: 30px;
+    grid-area: pa;
+  
+}
