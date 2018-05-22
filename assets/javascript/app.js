@@ -1,9 +1,34 @@
+
+
 $(document).ready(function() {
-    
-    
-    function clear() {
-        $(".btn").empty();
+
+var timer;
+var count = 25;
+
+
+
+
+timer = setTimeout(update, 1000);
+
+
+
+function update()
+{
+    if (count > 0)
+    {
+       $("#counter").text(--count);
+       $(".clock").text(count);
+       timer = setTimeout(update, 1000);
     }
+    else
+    {
+        window.location.href = "gameOver.html";
+        
+    }
+}
+    
+    
+  
     
     function submit() {
         
@@ -52,12 +77,11 @@ $(document).ready(function() {
 
         if (correct == 3) {
             $(".results").append("75%!");
-            
         }
 
         if (correct == 4) {
             $(".results").append("100%!");
-            
+            clear();
         }
 
 
@@ -68,8 +92,13 @@ $(document).ready(function() {
         $(".results").css({
             "visibility" : "visible"
             
+            
         });
         submit();
+        count = 900000;
+        $(".clock").css({
+            "visibility" : "hidden"
+        })
         
 
 
